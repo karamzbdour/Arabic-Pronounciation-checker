@@ -8,7 +8,7 @@ The script works by:
 
 1.  **Loading Audio:** It loads an audio recording (`test_audio.wav`) and resamples it to 16,000 Hz, which is the required input rate for the model.
 2.  **Speech Recognition:** It uses the `jonatasgrosman/wav2vec2-large-xlsr-53-arabic` model from Hugging Face's `transformers` library to transcribe the spoken audio.
-3.  **Text Normalization:** It normalises both the predicted text and the reference word by:
+3.  **Text Normalisation:** It normalises both the predicted text and the reference word by:
     *   Stripping Arabic diacritics (Tashkeel).
     *   Standardising variations of Alef, Tah Marbuta, and Yah.
     *   Removing non-Arabic characters and extra spaces.
@@ -30,11 +30,11 @@ You will also need `ffmpeg` installed on your system for `librosa` to effectivel
 ## Usage
 
 1.  Ensure you have an audio file named `test_audio.wav` in the same directory as the script.
-2.  Open `transcription_script.py` and modify the `reference_word` variable to match the word you are expecting to hear in the audio file.
+2.  Open `main_script.py` and modify the `reference_word` variable to match the word you are expecting to hear in the audio file.
 3.  Run the script:
 
 ```bash
-python transcription_script.py
+python main_script.py
 ```
 
 ## How the Scoring Works
